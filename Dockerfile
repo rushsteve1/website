@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-RUN apk add --no-cache elixir ruby babashka python3
+RUN apk add --no-cache elixir ruby python3
 
 RUN mkdir -p /opt/website
 WORKDIR /opt/website
