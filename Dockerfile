@@ -9,4 +9,5 @@ COPY public/* .
 COPY cgi-bin/ cgi-bin/
 
 USER nobody:nobody
-CMD "python3 -m http.server --cgi 101010"
+EXPOSE 10101
+CMD ["python", "-m", "http.server", "--cgi", "10101"]

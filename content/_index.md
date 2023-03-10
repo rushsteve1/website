@@ -9,9 +9,7 @@ I'm a FOSS fan too so I do a lot of side stuff for fun.
 
 My public projects are on
 <a href="https://github.com/rushsteve1" target="_blank" rel="me" class="b">GitHub</a>.
-More importantly, check out my
-<a href="https://git.rushsteve1.us" target="_blank" rel="me" class="b" >Gitea</a>
-which has misc code, and my [Blog](/blog).
+More importantly, check out my [Blog](/blog).
 
 If you wanna talk send me <a href="mailto:rushsteve1@rushsteve1.us">an email</a>.
 For business stuff check out
