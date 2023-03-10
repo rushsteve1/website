@@ -1,0 +1,25 @@
+{% import "macros.html" as macros %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="{{ lang }}">
+
+<head>
+	{{ macros::shared_head(context=page) }}
+	<link rel="stylesheet" type="text/css" href="/syntax-theme-dark.css" media="(prefers-color-scheme: dark)" />
+	<link rel="stylesheet" type="text/css" href="/syntax-theme-light.css" media="(prefers-color-scheme: light)" />
+</head>
+
+<body>
+	<main>
+		<article>
+			{{ macros::breadcrumbs(context=page) }}
+			<header>
+				<h1>{{ page.title }}</h1>
+				{{ macros::page_info(page=page) }}
+			</header>
+			{{ page.content | safe }}
+		</article>
+	</main>
+</body>
+
+</html>

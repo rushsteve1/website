@@ -1,0 +1,26 @@
+{% import "macros.html" as macros %}
+
+<!-- Nosey eh? Check it here https://git.rushsteve1.us/rushsteve1/website -->
+<!DOCTYPE html>
+<html class="no-js" lang="{{ lang }}">
+
+<head>
+	{{ macros::shared_head(context=section) }}
+	<link rel="stylesheet" href="/index.css" type="text/css" media="screen" />
+</head>
+
+<body>
+	<div id="bottom">
+		<div class="bar red"></div>
+		<div class="bar blue"></div>
+		<div class="bar yellow"></div>
+	</div>
+	<div id="top">
+		<img id="logo" src="./logo.svg" alt="My Logo, look out for it around the 'net" />
+		<main>
+			{{ section.content | safe }}
+		</main>
+	</div>
+</body>
+
+</html>

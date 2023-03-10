@@ -1,0 +1,48 @@
+{% import "macros.html" as macros %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="{{ lang }}">
+
+<head>
+	{{ macros::shared_head(context=section) }}
+</head>
+
+<body>
+	<main>
+		<article>
+			{{ macros::breadcrumbs(context=section) }}
+			<header>
+				<h1>{{ section.title }}</h1>
+			</header>
+
+			{{ section.content | safe }}
+
+			<nav>
+				{% if section.subsections %}
+				<h2>Sub-Sections</h2>
+				<ul>
+					{% for spath in section.subsections %}
+					{% set s = get_section(path=spath) %}
+					<li><a href="{{ s.path }}">{{ s.title }}</a></li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+
+				{% if section.subsections %}
+				<h2>Posts</h2>
+				{% endif %}
+				<ul class="posts">
+					{% for page in section.pages %}
+					<li><a href="{{ page.path }}">
+							<h2>{{ page.title }}</h2>
+						</a>
+						{{ macros::page_info(page=page) }}
+					</li>
+					{% endfor %}
+				</ul>
+			</nav>
+		</article>
+	</main>
+</body>
+
+</html>

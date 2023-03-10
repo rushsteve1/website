@@ -1,0 +1,89 @@
+/* https: //github.com/npmaile/blog/blob/main/posts/flashbang.md */
+:root {
+	color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		color: white;
+		background-color: #151515;
+	}
+
+	a {
+		color: skyblue;
+	}
+
+	a:visited {
+		color: violet;
+	}
+
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	font-family: "Noto Sans Mono", monospace;
+	animation: 3s bgfade;
+	background-color: white;
+	color: #151515;
+}
+
+a {
+	color: white;
+	background-color: #2784e2;
+	text-decoration: none;
+	padding: 0 0.2em;
+	display: inline-block;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.b {
+	background-color: #151515;
+	color: white;
+}
+
+.bar {
+	height: 5vh;
+	border-bottom: 1vh solid;
+	opacity: 0.4;
+	animation: 3s barslide;
+}
+
+article {
+	max-width: 40rem;
+	margin: auto;
+	padding-top: 2rem;
+	padding-bottom: 10rem;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0.2rem;
+}
+
+small {
+	color: #a5a5a5;
+}
+
+small:hover {
+	color: inherit;
+}
+
+pre {
+	overflow: auto;
+	padding: 1rem;
+}
+
+ul.posts {
+	list-style: none;
+}
+
+ul.posts li {
+	margin: 1rem 0;
+	padding: 0.5rem;
+}

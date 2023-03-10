@@ -1,0 +1,47 @@
+{% macro shared_head(context) %}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<title>{{ config.title }} - {{ context.title }}</title>
+<meta name="description" content="{{ context.description }}" />
+
+<meta name="og:title" content="{{ config.title }} - {{ context.title }}" />
+<meta name="og:image" content="./logo.svg" />
+<meta name="og:description" content="{{ context.description }}" />
+<meta name="og:url" content="{{ current_url }}" />
+
+<link rel="stylesheet" href="/shared.css" type="text/css" media="screen" />
+<link rel="icon" href="/logo.svg" type="image/svg+xml" />
+{% endmacro shared_head %}
+
+{% macro page_info(page) %}
+<small>
+	<div>
+		{{ page.date }} | {{ page.reading_time }} min | {{ page.word_count }} words
+	</div>
+
+	<div>
+		{% if page.taxonomies["category"] %}
+		in {{ page.taxonomies["category"] | first }}
+		|
+		{% endif %}
+		{% if page.taxonomies["tags"] %}
+		tagged
+		{% for tag in page.taxonomies["tags"] %}
+		{{ tag }}
+		{% endfor %}
+		{% endif %}
+	</div>
+</small>
+{% endmacro post_info %}
+
+{% macro breadcrumbs(context) %}
+<a href="/">~</a>
+{% for part in context.ancestors %}
+{% set s = get_section(path=part, metadata_only=true) %}
+{% if s.components %}
+/ <a href="{{ s.path }}">{{ s.components | last }}</a>
+{% endif %}
+{% endfor %}
+/ {{ context.components | last }}
+{% endmacro breadcrumbs %}
