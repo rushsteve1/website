@@ -29,6 +29,10 @@ body {
 	color: #151515;
 }
 
+p {
+	text-align: justify;
+}
+
 a {
 	color: white;
 	background-color: #2784e2;
