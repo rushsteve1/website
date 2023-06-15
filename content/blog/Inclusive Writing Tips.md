@@ -1,6 +1,8 @@
 +++
 title = "Inclusive Writing Tips"
 date = 2022-04-15
+[taxonomies]
+category = ["writing"]
 +++
 
 When you're doing formal writing, for a blog, book, article, document, etc. you

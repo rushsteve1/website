@@ -1,3 +1,6 @@
-.DS_Store
-public/
 *.swp
+.DS_Store
+*.swp
+.elixir_ls/
+
+public/

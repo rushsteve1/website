@@ -1,6 +1,8 @@
 +++
 title = "Hidden Gems of Anime"
 date = 2018-06-02
+[taxonomies]
+category = ["anime"]
 +++
 
 With all the anime there is out there it can be hard to find new things to

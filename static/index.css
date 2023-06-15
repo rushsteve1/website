@@ -1,3 +1,8 @@
+/*
+This file mostly contains the CSS animations and tweaks required to get the
+fancy load-in animation to work correctly.
+*/
+
 body {
 	overflow: hidden;
 }
@@ -6,7 +11,7 @@ body {
 
 	0%,
 	75% {
-		background-color: #151515;
+		background-color: var(--logo-black);
 	}
 }
 
@@ -74,7 +79,12 @@ body {
 	}
 }
 
-@keyframes mainheight {
+.bar {
+	height: 5vh;
+	animation: 3s barslide;
+}
+
+@keyframes articleheight {
 
 	0%,
 	75% {
@@ -85,38 +95,13 @@ body {
 	}
 }
 
-main {
+article {
 	font-size: 16pt;
 	margin: 1rem;
 	height: 20rem;
 	max-width: 50rem;
 	opacity: 1;
-	animation: 4.5s mainheight;
-}
-
-.name {
-	background-color: #f1b339;
-	color: white;
-}
-
-code {
-	background-color: #ce2d27;
-	color: white;
-}
-
-.bar.red {
-	background-color: #f63727;
-	border-bottom-color: #ce2d27;
-}
-
-.bar.blue {
-	background-color: #27a2f6;
-	border-bottom-color: #2784e2;
-}
-
-.bar.yellow {
-	background-color: #f6cc3d;
-	border-bottom-color: #f1b339;
+	animation: 4.5s articleheight;
 }
 
 @media only screen and (max-width: 768px) {
@@ -124,7 +109,7 @@ code {
 		text-align: center;
 	}
 
-	main {
+	article {
 		height: 50rem;
 	}
 }

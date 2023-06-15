@@ -1,6 +1,9 @@
 +++
 title = "Anicard"
 date = 2018-04-05
+[taxonomies]
+category = ["programming"]
+tags = ["rust"]
 +++
 
 A project that I have been working on for the last couple of months has come to fruition. Yes, for once, I actually completed a side project! Check it out [here in the repo](https://repo.rushsteve1.us/dir?ci=tip&name=anicard).

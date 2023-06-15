@@ -11,15 +11,23 @@
 
 <body>
 	<main>
-		<article>
-			{{ macros::breadcrumbs(context=page) }}
+		{{ macros::breadcrumbs(context=page) }}
+		<article id="swup" class="transition-fade">
 			<header>
-				<h1>{{ page.title }}</h1>
+				<h1 class="title box yellow">{{ page.title }}</h1>
 				{{ macros::page_info(page=page) }}
 			</header>
-			{{ page.content | safe }}
+			<dialog>
+				<summary>Contents</summary>
+				{{ page.toc }}
+			</dialog>
+			<div id="blog-post">
+				{{ page.content | safe }}
+			</div>
+
 		</article>
 	</main>
+	{{ macros::footer() }}
 </body>
 
 </html>

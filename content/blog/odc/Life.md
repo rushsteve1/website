@@ -1,6 +1,9 @@
 +++
 title = "One Day Challenge: Life"
 date = 2020-03-17
+[taxonomies]
+category = ["programming"]
+tags = ["clojure"]
 +++
 
 [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)

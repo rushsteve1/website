@@ -1,6 +1,9 @@
 +++
 title = "Keyboard Build Log"
 date = 2022-01-03
+[taxonomies]
+category = ["hardware"]
+tags = ["keyboard", "mk"]
 +++
 
 ## The Planck

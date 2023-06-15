@@ -1,6 +1,9 @@
 +++
 title = "One Day Challenge: SSIF"
 date = 2020-03-09
+[taxonomies]
+category = ["programming"]
+tags = ["rust"]
 +++
 
 This is my second One Day Challenge that I have done for myself, and I think a

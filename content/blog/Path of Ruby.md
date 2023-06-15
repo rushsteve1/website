@@ -1,6 +1,9 @@
 +++
 title = "Path of Ruby"
 date = 2019-08-14
+[taxonomies]
+category = ["programming"]
+tags = ["ruby"]
 +++
 
 I have somewhat decided to contribute to the [Ruby programming

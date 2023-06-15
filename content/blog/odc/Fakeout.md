@@ -1,6 +1,9 @@
 +++
 title = "One Day Challenge: Fakeout"
 date = 2020-03-09
+[taxonomies]
+category = ["programming"]
+tags = ["web", "javascript"]
 +++
 
 One of the first real programming projects I ever did, and certianly one of the

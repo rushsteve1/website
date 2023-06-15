@@ -1,6 +1,9 @@
 +++
 title = "Getting started with Rust FFI"
 date = 2019-02-15
+[taxonomies]
+category = ["programming"]
+tags = ["rust"]
 +++
 
 > **UPDATE 2022:** This is now rather outdated, but still might be accurate. Your mileage may vary.

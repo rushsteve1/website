@@ -1,6 +1,9 @@
 +++
 title = "Modding the Web"
 date = 2022-02-02
+[taxonomies]
+category = ["programming"]
+tags = ["web", "javascript", "userscripts"]
 +++
 
 I've known for a while that browser plugins for [Userscripts](https://en.wikipedia.org/wiki/Userscript) and Userstyles exist and have some really dedicated fans, but I never really saw the point and didn't give them a fair shake for a long time.

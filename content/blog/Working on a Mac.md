@@ -1,6 +1,9 @@
 +++
 title = "Working on a Mac"
 date = 2020-03-30
+[taxonomies]
+category = ["hardware"]
+tags = ["mac"]
 +++
 
 For the last few months, ever since I started my current internship in late

@@ -1,32 +1,90 @@
-/* https: //github.com/npmaile/blog/blob/main/posts/flashbang.md */
+/*
+This is the main CSS file that is shared across this website
+*/
+
 :root {
-	color-scheme: light dark;
+	/* https://github.com/npmaile/blog/blob/main/posts/flashbang.md */
+	/* color-scheme: light dark; */
+
+	/* Theme colors taken from my logo */
+	--logo-black: #151515;
+	--logo-black-accent: #777777;
+	--logo-white: #ffffff;
+	--logo-red: #f63727;
+	--logo-red-accent: #ce2d27;
+	--logo-blue: #27a2f6;
+	--logo-blue-accent: #2784e2;
+	--logo-yellow: #f6cc3d;
+	--logo-yellow-accent: #f1b339;
 }
 
+/* Font Setup */
+@font-face {
+	font-family: "Bitstream Vera Sans Mono";
+	src: url('/fonts/VeraMono-webfont.woff') format('woff');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Bitstream Vera Sans Mono";
+	src: url('/fonts/VeraMono-Bold-webfont.woff') format('woff');
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Bitstream Vera Sans Mono";
+	src: url('/fonts/VeraMono-Italic-webfont.woff') format('woff');
+	font-style: italic;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Bitstream Vera Sans Mono";
+	src: url('/fonts/VeraMono-BoldItalic-webfont.woff') format('woff');
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* Dark and Light themes */
 @media (prefers-color-scheme: dark) {
 	body {
-		color: white;
-		background-color: #151515;
+		color: white !important;
+		background-color: var(--logo-black) !important;
 	}
-
-	a {
-		color: skyblue;
-	}
-
-	a:visited {
-		color: violet;
-	}
-
 }
+
+/* Swup transitions */
+
+.transition-fade {
+	transition: 0.3s;
+	opacity: 1;
+}
+
+html.is-animating .transition-fade {
+	opacity: 0;
+}
+
+/* Default style fixes */
 
 body {
 	margin: 0;
 	padding: 0;
-	height: 100vh;
-	font-family: "Noto Sans Mono", monospace;
+	min-height: calc(100vh - 2.8rem);
+	font-family: "Bitstream Vera Sans Mono", monospace;
 	animation: 3s bgfade;
-	background-color: white;
-	color: #151515;
+	background-color: var(--logo-white);
+	color: var(--logo-black);
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+main {
+	max-width: 40rem;
+	margin: auto;
+	padding-top: 2rem;
+	flex-grow: 1;
 }
 
 p {
@@ -34,54 +92,166 @@ p {
 }
 
 a {
-	color: white;
-	background-color: #2784e2;
+	color: var(--logo-blue);
 	text-decoration: none;
-	padding: 0 0.2em;
-	display: inline-block;
+	font-weight: bold;
 }
 
 a:hover {
 	text-decoration: underline;
 }
 
-.b {
-	background-color: #151515;
-	color: white;
-}
-
-.bar {
-	height: 5vh;
-	border-bottom: 1vh solid;
-	opacity: 0.4;
-	animation: 3s barslide;
-}
-
-article {
-	max-width: 40rem;
-	margin: auto;
-	padding-top: 2rem;
-	padding-bottom: 10rem;
-}
-
 h1,
 h2,
 h3 {
+	font-weight: bold;
 	margin: 0.2rem;
 }
 
 small {
-	color: #a5a5a5;
+	display: block;
+	opacity: 0.5;
+	transition: opacity 0.25s;
 }
 
 small:hover {
-	color: inherit;
+	opacity: initial;
 }
 
 pre {
 	overflow: auto;
 	padding: 1rem;
 }
+
+hr {
+	width: 75%;
+	border: none;
+	border-top: 0.1rem solid var(--logo-black-accent);
+	margin: 2rem auto;
+}
+
+code {
+	color: var(--logo-red-accent)
+}
+
+table {
+	border-collapse: collapse;
+	margin: 1rem auto;
+}
+
+thead {
+	border-bottom: 0.1rem solid var(--logo-black);
+}
+
+th,
+td {
+	padding: 0.3rem;
+	text-align: start;
+}
+
+th+th,
+td+td {
+	border-left: 0.1rem solid var(--logo-black-accent);
+}
+
+/* General / Utility styles */
+
+.fancy.red {
+	color: var(--logo-red);
+}
+
+a.fancy.red:hover {
+	color: var(--logo-red-accent);
+}
+
+.fancy.blue {
+	color: var(--logo-blue);
+}
+
+a.fancy.blue:hover {
+	color: var(--logo-blue-accent);
+}
+
+.fancy.yellow {
+	color: var(--logo-yellow);
+}
+
+a.fancy.yellow:hover {
+	color: var(--logo-yellow-accent);
+}
+
+.box {
+	color: white;
+	padding: 0 0.2em;
+	display: inline-block;
+	font-weight: normal;
+}
+
+.box.black {
+	background-color: var(--logo-black-accent);
+}
+
+.box.black.hov:hover,
+a.box.black:hover {
+	background-color: var(--logo-black);
+}
+
+.box.red {
+	background-color: var(--logo-red);
+}
+
+.box.red.hov:hover,
+a.box.red:hover {
+	background-color: var(--logo-red-accent);
+}
+
+.box.blue {
+	background-color: var(--logo-blue);
+}
+
+.box.blue.hov:hover,
+a.box.blue:hover {
+	background-color: var(--logo-blue-accent);
+}
+
+.box.yellow {
+	background-color: var(--logo-yellow);
+}
+
+.box.yellow.hov:hover,
+a.box.yellow:hover {
+	background-color: var(--logo-yellow-accent);
+}
+
+.bar {
+	height: 1rem;
+	border-bottom: 0.3rem solid;
+	opacity: 0.3;
+}
+
+.bar.red {
+	background-color: var(--logo-red);
+	border-bottom-color: var(--logo-red-accent);
+}
+
+.bar.blue {
+	background-color: var(--logo-blue);
+	border-bottom-color: var(--logo-blue-accent);
+}
+
+.bar.yellow {
+	background-color: var(--logo-yellow);
+	border-bottom-color: var(--logo-yellow-accent);
+}
+
+.fx-row {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Specific styles */
 
 ul.posts {
 	list-style: none;
@@ -90,4 +260,26 @@ ul.posts {
 ul.posts li {
 	margin: 1rem 0;
 	padding: 0.5rem;
+}
+
+#header-logo {
+	max-width: 3rem;
+}
+
+.title {
+	margin-top: 2rem;
+	font-size: 32pt;
+}
+
+footer {
+	position: relative;
+	color: var(--logo-black-accent);
+	text-align: center;
+	margin: 1rem 0;
+}
+
+footer > div {
+	position: absolute;
+	height: 100%;
+	width: 100%;
 }

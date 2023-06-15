@@ -1,6 +1,9 @@
 +++
 title = "Thoughts on Systems Languages"
 date = 2022-01-18
+[taxonomies]
+category = ["programming"]
+tags = ["opinion"]
 +++
 
 This is a somewhat random collection of my thoughts on a variety of
