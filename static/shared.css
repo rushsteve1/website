@@ -2,50 +2,7 @@
 This is the main CSS file that is shared across this website
 */
 
-:root {
-	/* https://github.com/npmaile/blog/blob/main/posts/flashbang.md */
-	/* color-scheme: light dark; */
-
-	/* Theme colors taken from my logo */
-	--logo-black: #151515;
-	--logo-black-accent: #777777;
-	--logo-white: #ffffff;
-	--logo-red: #f63727;
-	--logo-red-accent: #ce2d27;
-	--logo-blue: #27a2f6;
-	--logo-blue-accent: #2784e2;
-	--logo-yellow: #f6cc3d;
-	--logo-yellow-accent: #f1b339;
-}
-
-/* Font Setup */
-@font-face {
-	font-family: "Bitstream Vera Sans Mono";
-	src: url('/fonts/VeraMono-webfont.woff') format('woff');
-	font-style: normal;
-	font-weight: normal;
-}
-
-@font-face {
-	font-family: "Bitstream Vera Sans Mono";
-	src: url('/fonts/VeraMono-Bold-webfont.woff') format('woff');
-	font-style: normal;
-	font-weight: bold;
-}
-
-@font-face {
-	font-family: "Bitstream Vera Sans Mono";
-	src: url('/fonts/VeraMono-Italic-webfont.woff') format('woff');
-	font-style: italic;
-	font-weight: normal;
-}
-
-@font-face {
-	font-family: "Bitstream Vera Sans Mono";
-	src: url('/fonts/VeraMono-BoldItalic-webfont.woff') format('woff');
-	font-style: italic;
-	font-weight: bold;
-}
+@import url(/base.css);
 
 /* Dark and Light themes */
 @media (prefers-color-scheme: dark) {
@@ -69,11 +26,7 @@ html.is-animating .transition-fade {
 /* Default style fixes */
 
 body {
-	margin: 0;
-	padding: 0;
 	min-height: calc(100vh - 2.8rem);
-	font-family: "Bitstream Vera Sans Mono", monospace;
-	animation: 3s bgfade;
 	background-color: var(--logo-white);
 	color: var(--logo-black);
 	display: flex;
