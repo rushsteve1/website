@@ -15,7 +15,7 @@ My public projects are listed [on the Projects](/projects) page.
 This is also a WIP as I work on getting some of my old projects in a better
 state for others to view.
 
-Interested in hiring me? Check out my [Resume](/resume.html)
+Interested in hiring me? Check out my [Resume](/resume.pdf)
 and my [LinkedIn](https://linkedin.com/in/stevenvanzyl).
 
 If you want to see the fancy animation again you can go back to the
