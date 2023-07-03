@@ -15,3 +15,4 @@ If you wanna talk send me <a href="mailto:rushsteve1@rushsteve1.us" class="box b
 For business stuff check out <a href="/resume.pdf" target="_blank" class="box black">my resume</a>.
 Otherwise just look for <span class="box red">rushsteve1</span> around the 'net, I use that for everything.
 
+<a rel="me" href="https://knowhere.cafe/@rushsteve1" style="display:none">Mastodon</a>
