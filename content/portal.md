@@ -27,5 +27,5 @@ This site is generated using the [Zola](https://www.getzola.org) static site
 generator and a custom hand-made theme. It is served off of my home server
 and proxied with [Cloudflare](https://cloudflare.com).
 
-Wanna peep my computers' specs? Check out the [Specs](/specs) page for all the
-gorey details.
+Wanna peep my computers' specs or what software I use? Check out the
+[Uses](/uses) page for all the gorey details.
