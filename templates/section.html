@@ -10,7 +10,7 @@
 <body>
 	<main>
 		{{ macros::breadcrumbs(context=section) }}
-		<article id="swup" class="transition-fade"> 
+		<article class="transition-fade"> 
 			<header>
 				<h1 class="title box yellow">{{ section.title }}</h1>
 			</header>
@@ -26,7 +26,10 @@
 					{% set s = get_section(path=spath) %}
 					<li>
 						<h3>
-							<a href="{{ s.path }}" class="fancy {{ ['blue', 'yellow', 'red'] | nth(n = loop.index % 2) }}">{{ s.title }}</a>
+							<a href="{{ s.path }}"
+								class="fancy {{ ['blue', 'yellow', 'red'] | nth(n = loop.index % 2) }}">
+								{{ s.title }}
+							</a>
 						</h3>
 					</li>
 					{% endfor %}
@@ -41,8 +44,8 @@
 					{% for page in section.pages %}
 					<li>
 						<h3>
-							<a href="{{ page.path }}"
-								class="fancy {{ ['blue', 'yellow', 'red'] | nth(n = loop.index % 3) }}">{{ page.title }}
+							<a href="{{ page.path }}">
+								{{ page.title }}
 							</a>
 						</h3>
 						{{ macros::page_info(page=page) }}

@@ -12,17 +12,6 @@ This is the main CSS file that is shared across this website
 	}
 }
 
-/* Swup transitions */
-
-.transition-fade {
-	transition: 0.3s;
-	opacity: 1;
-}
-
-html.is-animating .transition-fade {
-	opacity: 0;
-}
-
 /* Default style fixes */
 
 body {
@@ -34,7 +23,8 @@ body {
 }
 
 main {
-	max-width: 40rem;
+	max-width: 50rem;
+	min-width: 40rem;
 	margin: auto;
 	padding-top: 2rem;
 	flex-grow: 1;
@@ -52,6 +42,10 @@ a {
 
 a:hover {
 	text-decoration: underline;
+}
+
+h1 a, h2 a, h3 a {
+	color: inherit;
 }
 
 h1,
