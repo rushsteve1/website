@@ -2,7 +2,7 @@
 
 https://rushsteve1.us
 
-My personal website using [Zola](https://getzola.org) and CGI. Self-hosted.
+My personal website landing page
 
 All code is licensed under [Apache 2.0](./LICENSE.txt)
 

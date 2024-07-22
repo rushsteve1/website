@@ -1,0 +1,273 @@
+/* Messy hand-rolled CSS */
+
+:root {
+	/* https://github.com/npmaile/blog/blob/main/posts/flashbang.md */
+	color-scheme: light dark;
+
+	/* Theme colors taken from my logo */
+	--logo-black: #151515;
+	--logo-black-accent: #777777;
+	--logo-white: #ffffff;
+	--logo-red: #f63727;
+	--logo-red-accent: #ce2d27;
+	--logo-blue: #27a2f6;
+	--logo-blue-accent: #2784e2;
+	--logo-yellow: #f6cc3d;
+	--logo-yellow-accent: #f1b339;
+}
+
+body {
+	font-family: "Verdana", sans-serif;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	animation: 3s bgfade;
+	min-height: calc(100vh - 2.8rem);
+	background-color: var(--logo-white);
+	color: var(--logo-black);
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+#logo {
+	height: 20vh;
+	width: auto;
+	opacity: 1;
+
+	animation: 2s logofade, 3s logospin;
+}
+
+#top {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	animation: 3s scrollfix;
+}
+
+#bottom {
+	z-index: -1;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 100vh;
+	width: 100vw;
+}
+
+main {
+	font-size: 16pt;
+	margin: 1rem;
+	height: 20rem;
+	max-width: 50rem;
+	opacity: 1;
+	animation: 4.5s mainheight;
+}
+
+/* Default style fixes */
+
+p {
+	text-align: justify;
+}
+
+a {
+	color: var(--logo-blue);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 a,
+h2 a,
+h3 a {
+	color: inherit;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: bold;
+	margin: 0.2rem;
+}
+
+/* General / Utility styles */
+
+.fancy.red {
+	color: var(--logo-red);
+}
+
+a.fancy.red:hover {
+	color: var(--logo-red-accent);
+}
+
+.fancy.blue {
+	color: var(--logo-blue);
+}
+
+a.fancy.blue:hover {
+	color: var(--logo-blue-accent);
+}
+
+.fancy.yellow {
+	color: var(--logo-yellow);
+}
+
+a.fancy.yellow:hover {
+	color: var(--logo-yellow-accent);
+}
+
+.box {
+	color: white;
+	padding: 0 0.2em;
+	display: inline-block;
+	font-weight: normal;
+}
+
+.box.black {
+	background-color: var(--logo-black-accent);
+}
+
+.box.black.hov:hover,
+a.box.black:hover {
+	background-color: var(--logo-black);
+}
+
+.box.red {
+	background-color: var(--logo-red);
+}
+
+.box.red.hov:hover,
+a.box.red:hover {
+	background-color: var(--logo-red-accent);
+}
+
+.box.blue {
+	background-color: var(--logo-blue);
+}
+
+.box.blue.hov:hover,
+a.box.blue:hover {
+	background-color: var(--logo-blue-accent);
+}
+
+.box.yellow {
+	background-color: var(--logo-yellow);
+}
+
+.box.yellow.hov:hover,
+a.box.yellow:hover {
+	background-color: var(--logo-yellow-accent);
+}
+
+/* Bottom Bars */
+
+.bar {
+	height: 5vh;
+	border-bottom: 0.3rem solid;
+	opacity: 0.3;
+	animation: 3s barslide;
+}
+
+.bar.red {
+	background-color: var(--logo-red);
+	border-bottom-color: var(--logo-red-accent);
+}
+
+.bar.blue {
+	background-color: var(--logo-blue);
+	border-bottom-color: var(--logo-blue-accent);
+}
+
+.bar.yellow {
+	background-color: var(--logo-yellow);
+	border-bottom-color: var(--logo-yellow-accent);
+}
+
+/* Animations */
+
+@keyframes bgfade {
+
+	0%,
+	75% {
+		background-color: var(--logo-black);
+	}
+}
+
+@keyframes scrollfix {
+
+	0%,
+	99% {
+		overflow-y: hidden;
+	}
+}
+
+
+@keyframes logofade {
+
+	0%,
+	25% {
+		opacity: 0;
+	}
+}
+
+@keyframes logospin {
+
+	0%,
+	70% {
+		transform: rotate(45deg);
+		height: 88vh;
+	}
+}
+
+@keyframes barslide {
+
+	0%,
+	70% {
+		height: 11.9vh;
+		opacity: 1;
+		border-bottom-width: 2vh;
+	}
+}
+
+
+@keyframes mainheight {
+
+	0%,
+	75% {
+		height: 0;
+		margin: 0;
+		padding: 0;
+		opacity: 0;
+	}
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+	h1 {
+		text-align: center;
+	}
+
+	main {
+		height: 50rem;
+	}
+
+	.bar {
+		height: 0px;
+	}
+}
+
+/* Dark and Light themes */
+
+@media (prefers-color-scheme: dark) {
+	body {
+		color: var(--logo-white) !important;
+		background-color: var(--logo-black) !important;
+	}
+}
